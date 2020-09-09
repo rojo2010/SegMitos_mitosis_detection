@@ -77,7 +77,7 @@ def cal_F1(areaTh, folder_cen, dirname):
 
 
 def calPr(det, areaTh):   
-    '''filter the detections by using area threshold'''
+        '''filter the detections by using area threshold'''
 	data= sio.loadmat(det)
 	area, score, centroid = data['area'], data['score'], data['centroid']
 	if areaTh>0:  # filter by area
