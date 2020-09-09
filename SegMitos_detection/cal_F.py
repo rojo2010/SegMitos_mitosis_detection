@@ -45,7 +45,7 @@ def cal_F1(areaTh, folder_cen, dirname):
 			label, score, N_gt = calPr(img[j], areaTh)
 			Label = np.vstack((Label, label))
 			Score = np.vstack((Score,score))
-            sum_gt = sum_gt+N_gt
+                sum_gt = sum_gt+N_gt
 	s = np.squeeze(np.argsort(Score,axis=0))
 	Score_s = Score[s]
 	Label_s = Label[s] #Label and Label_s shape = [n,1]
