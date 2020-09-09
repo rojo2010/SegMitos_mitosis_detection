@@ -35,7 +35,7 @@ def cal_F(folder_cen, dirname):
 def cal_F1(areaTh, folder_cen, dirname):
 	'''compute the P,R,F'''
 	detfolder = folder_cen
-    sum_gt = 0
+        sum_gt = 0
 	Label, Score = np.zeros((0,1)), np.zeros((0,1))
 	for i in range(len(dirname)):
 		filepath = detfolder + dirname[i] + '/*.mat'  
@@ -93,7 +93,7 @@ def calPr(det, areaTh):
 	gt_datadict = sio.loadmat(gt)
 	gt_centroid = gt_datadict['centroid'] #gt_centroid.shape = (n,2)
 	gt_centroid = gt_centroid.astype(np.int64)
-    N_gt = gt_centroid.shape[0]
+        N_gt = gt_centroid.shape[0]
 	label = np.zeros((res.shape[0],1))   
 	for i in range(res.shape[0]):
 		for j in range(gt_centroid.shape[0]):
